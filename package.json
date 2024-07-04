@@ -1,0 +1,25 @@
+{
+  "name": "sonar-grabber",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Getting hotspots and vulnerabilities out of sonar for analysis",
+  "main": "main.ts",
+  "scripts": {
+    "test": "jest",
+    "compile": "tsc",
+    "format": "./node_modules/.bin/prettier --write ./src/",
+    "sonar": "rm -r dist/ && npm run compile && mkdir dist/config && cp src/config/config.json dist/config/config.json && node dist/main.js"
+  },
+  "author": "sandy-may",
+  "license": "MIT",
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "axios": "^1.7.2",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.2",
+    "table": "^6.8.2",
+    "ts-jest": "^29.1.5",
+    "typescript": "^5.5.3",
+    "@types/node": "20.14.9"
+  }
+}
